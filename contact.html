@@ -8,11 +8,87 @@
     
     <!---CSS-->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <!-- CSSパスを修正 -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <!---Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
 </head>
+<body>
+<header>
+        <h1>Contact</h1>
+            <ul class="main-nav Font-engish">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="music.html">Music</a></li>
+
+            </ul>
+    </header>
+    
+    <!-- メイン画像セクション -->
+  
+  <main>
+        <!-- コンタクトフォームセクション -->
+        <section class="contact-section">
+            <div class="container">
+                <h2 class="section-title">お問い合わせ</h2>
+                <p class="section-subtitle">ご質問やご相談がございましたら、お気軽にお問い合わせください。</p>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">お名前 <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">メールアドレス <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">件名</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">メッセージ <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required placeholder="こちらにメッセージをご記入ください"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="submit-btn">送信する</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- 連絡先情報 -->
+                <div class="contact-info">
+                    <h3>その他の連絡方法</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p>ktc25a32a0010@edu.kyoto-tech.ac.jp</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Response Time</h4>
+                            <p>確認は22:00〜23:00の間</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copyrights">
+            &copy; 2023 竹中海斗. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/java.js"></script>
+</body>
+</html> 
