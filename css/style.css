@@ -641,7 +641,7 @@ header h1 {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px; /* 最大幅を設定 */
+    max-width: 900px; /* 最大幅を設定 */
     margin: 0 auto;
 }
 
@@ -663,17 +663,21 @@ header h1 {
 /* デスクトップ用のサイズ調整 */
 @media (min-width: 1024px) {
     .video-container {
-        max-width: 700px;
+        max-width: 1000px;
+        flex: 1;
     }
     
     .media-container {
         flex-direction: row;
         align-items: flex-start;
         gap: 3rem;
+        justify-content: space-between;
     }
     
     .music-image {
         flex-shrink: 0;
+        max-width: 350px;
+        width: 350px;
     }
 }
 
@@ -1512,5 +1516,58 @@ header h1 {
     .anime-list h1 {
         font-size: 1.3rem;
         padding: 0.8rem;
+    }
+}
+
+/* 大画面用のサイズ調整 */
+@media (min-width: 1440px) {
+    .video-container {
+        max-width: 1200px;
+    }
+    
+    .media-container {
+        gap: 4rem;
+        max-width: 1600px;
+        margin: 2rem auto;
+    }
+    
+    .music-image {
+        max-width: 400px;
+        width: 400px;
+    }
+}
+
+/* 超大画面用のサイズ調整 */
+@media (min-width: 1920px) {
+    .video-container {
+        max-width: 1400px;
+    }
+    
+    .media-container {
+        gap: 5rem;
+        max-width: 1800px;
+    }
+    
+    .music-image {
+        max-width: 450px;
+        width: 450px;
+    }
+}
+
+/* 横並び時の特別な調整 */
+@media (min-width: 1200px) {
+    .video-container {
+        min-width: 600px;
+        flex: 2;
+    }
+    
+    .media-container {
+        align-items: center;
+    }
+    
+    .music-image {
+        flex: 0 0 380px;
+        height: auto;
+        aspect-ratio: 1;
     }
 }
