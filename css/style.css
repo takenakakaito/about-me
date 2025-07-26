@@ -11,9 +11,9 @@
 body {
     font-family: 'Philosopher', 'Noto Sans JP', Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #e8f4fd;
     min-height: 100vh;
-    background: linear-gradient(135deg, #e3e8f0 0%, #c8d1e0 50%, #b4c2d7 100%);
+    background: linear-gradient(135deg, #0f1419 0%, #1a2332 50%, #2c3e50 100%);
     position: relative;
     overflow-x: hidden;
 }
@@ -27,8 +27,8 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+        radial-gradient(circle at 20% 20%, rgba(52, 152, 219, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(25, 42, 86, 0.4) 0%, transparent 50%);
     z-index: -2;
 }
 
@@ -37,7 +37,7 @@ body::before {
     position: fixed;
     width: 300px;
     height: 260px;
-    background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.2), rgba(25, 42, 86, 0.3));
     clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
     animation: rotate 30s linear infinite;
     z-index: -1;
@@ -62,10 +62,10 @@ body::before {
 
 /* ヘッダー */
 header {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(44, 62, 80, 0.95));
     backdrop-filter: blur(15px);
     padding: 1.5rem 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(52, 152, 219, 0.3);
     position: relative;
     z-index: 100;
 }
@@ -74,8 +74,12 @@ header h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1.5rem;
-    color: #2d3436;
-    font-weight: 400;
+    color: #3498db;
+    font-weight: 600;
+    background: linear-gradient(90deg, #3498db, #74b9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* ナビゲーション */
@@ -88,19 +92,20 @@ header h1 {
 }
 
 .main-nav li a {
-    color: #2d3436;
+    color: #74b9ff;
     text-decoration: none;
     font-size: 1.2rem;
     padding: 0.8rem 1.5rem;
     border-radius: 30px;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid rgba(116, 185, 255, 0.3);
+    background: rgba(15, 20, 25, 0.3);
 }
 
 .main-nav li a:hover {
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
-    border-color: #667eea;
+    border-color: #3498db;
     transform: translateY(-3px);
 }
 
@@ -115,13 +120,13 @@ main {
 
 /* ヒーローセクション */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #1a2332 0%, #2c3e50 100%);
+    color: #e8f4fd;
     text-align: center;
     padding: 4rem 2rem;
     margin: 2rem 0;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -134,7 +139,11 @@ main {
 .hero h2 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #3498db, #74b9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
 .hero p {
@@ -146,7 +155,7 @@ main {
 /* CTAボタン */
 .cta-button {
     display: inline-block;
-    background: #fd79a8;
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     padding: 1rem 2.5rem;
     text-decoration: none;
@@ -154,13 +163,13 @@ main {
     font-size: 1.1rem;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(253, 121, 168, 0.4);
+    border: 2px solid #3498db;
 }
 
 .cta-button:hover {
-    background: #e84393;
+    background: linear-gradient(135deg, #2980b9, #1f4e79);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(253, 121, 168, 0.6);
+    border-color: #2980b9;
 }
 
 /* 概要セクション */
@@ -175,69 +184,80 @@ main {
 .overview h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #2d3436;
+    color: #3498db;
     margin-bottom: 3rem;
+    background: linear-gradient(90deg, #3498db, #74b9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* カードレイアウト */
 .intro-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-row {
+    display: flex;
     gap: 2rem;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.9);
+    flex: 1;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9), rgba(44, 62, 80, 0.9));
     backdrop-filter: blur(10px);
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
 }
 
 .card h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #2d3436;
+    color: #74b9ff;
 }
 
 .card p {
-    color: #636e72;
+    color: #bdc3c7;
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
 .card a {
     display: inline-block;
-    color: #667eea;
+    color: #3498db;
     text-decoration: none;
     font-weight: bold;
     padding: 0.8rem 1.5rem;
-    border: 2px solid #667eea;
+    border: 2px solid #3498db;
     border-radius: 25px;
     transition: all 0.3s ease;
 }
 
 .card a:hover {
-    background: #667eea;
+    background: #3498db;
     color: white;
     transform: translateY(-2px);
 }
 
 /* フッター */
 footer {
-    background: rgba(45, 52, 54, 0.9);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.95), rgba(26, 35, 50, 0.95));
     backdrop-filter: blur(10px);
-    color: white;
+    color: #74b9ff;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
+    border-top: 2px solid rgba(52, 152, 219, 0.3);
 }
 
 /* レスポンシブデザイン */
@@ -254,8 +274,8 @@ footer {
         font-size: 2.5rem;
     }
     
-    .intro-cards {
-        grid-template-columns: 1fr;
+    .card-row {
+        flex-direction: column;
     }
 }
 
@@ -272,26 +292,30 @@ footer {
 
 /* プロフィールセクション */
 .profile {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9), rgba(44, 62, 80, 0.9));
     backdrop-filter: blur(10px);
     padding: 2.5rem;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     margin: 2rem 0;
     transition: all 0.3s ease;
 }
 
 .profile:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
 }
 
 .profile h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #2d3436;
+    color: #3498db;
     margin-bottom: 2rem;
     position: relative;
+    background: linear-gradient(90deg, #3498db, #74b9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .profile h2::after {
@@ -299,7 +323,7 @@ footer {
     display: block;
     width: 100px;
     height: 4px;
-    background: linear-gradient(90deg, #667eea, #764ba2);
+    background: linear-gradient(90deg, #3498db, #74b9ff);
     margin: 1rem auto;
     border-radius: 2px;
 }
@@ -308,24 +332,25 @@ footer {
     margin: 1rem 0;
     font-size: 1.1rem;
     padding: 1rem;
-    background: rgba(102, 126, 234, 0.05);
-    border-left: 4px solid #667eea;
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid #3498db;
     border-radius: 8px;
     transition: all 0.3s ease;
+    color: #bdc3c7;
 }
 
 .profile p:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(52, 152, 219, 0.2);
     transform: translateX(5px);
 }
 
 /* 自己紹介セクション */
 .introduction {
-    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-    color: white;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2332 100%);
+    color: #e8f4fd;
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     margin: 2rem 0;
     text-align: center;
 }
@@ -333,7 +358,11 @@ footer {
 .introduction h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #3498db, #74b9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
 }
 
 .introduction p {
@@ -360,18 +389,18 @@ footer {
 /*自分で打つ*/
 /* ゲームリストセクション */
 .game-list {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9), rgba(44, 62, 80, 0.9));
     backdrop-filter: blur(10px);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     margin: 2rem 0;
     transition: all 0.3s ease;
 }
 
 .game-list:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
 }
 
 .game-list ul {
@@ -382,14 +411,14 @@ footer {
 
 .game-list h1 {
     font-size: 2.2rem;
-    color: #2d3436;
+    color: #e8f4fd;
     margin: 2rem 0 1rem 0;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -402,12 +431,12 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 40%, rgba(116, 185, 255, 0.2) 0%, transparent 50%);
 }
 
 .game-list h1:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    border-color: #74b9ff;
 }
 
 .game-list h1:first-child {
@@ -417,36 +446,35 @@ footer {
 .game-list li {
     margin: 1rem 0;
     padding: 1.5rem;
-    background: rgba(102, 126, 234, 0.05);
-    border-left: 4px solid #667eea;
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid #3498db;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .game-list li:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(52, 152, 219, 0.2);
     transform: translateX(10px);
     border-left-width: 6px;
 }
 
 .game-list li a {
-    color: #667eea;
+    color: #3498db;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    border: 2px solid #667eea;
+    border: 2px solid #3498db;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(15, 20, 25, 0.3);
 }
 
 .game-list li a:hover {
-    background: #667eea;
+    background: #3498db;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 /* ゲームページ専用のヘッダータイトル調整 */
@@ -719,11 +747,11 @@ header h1 {
 
 /* コンタクトセクション */
 .contact {
-    background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
-    color: white;
+    background: linear-gradient(135deg, #2c3e50 0%, #1a2332 100%);
+    color: #e8f4fd;
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     margin: 3rem 0;
     text-align: center;
     position: relative;
@@ -737,7 +765,7 @@ header h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 70% 30%, rgba(52, 152, 219, 0.2) 0%, transparent 50%);
     z-index: 1;
 }
 
@@ -750,7 +778,11 @@ header h1 {
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #3498db, #74b9ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
 }
 
 .contact p {
@@ -1119,18 +1151,18 @@ header h1 {
 /* ========== Music Page Styles ========== */
 
 .music-list {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9), rgba(44, 62, 80, 0.9));
     backdrop-filter: blur(10px);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     margin: 2rem 0;
     transition: all 0.3s ease;
 }
 
 .music-list:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
 }
 
 .music-list ul {
@@ -1141,14 +1173,14 @@ header h1 {
 
 .music-list h1 {
     font-size: 2.2rem;
-    color: #2d3436;
+    color: #e8f4fd;
     margin: 2rem 0 1rem 0;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -1161,12 +1193,12 @@ header h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 40%, rgba(116, 185, 255, 0.2) 0%, transparent 50%);
 }
 
 .music-list h1:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    border-color: #74b9ff;
 }
 
 .music-list h1:first-child {
@@ -1176,36 +1208,36 @@ header h1 {
 .music-list li {
     margin: 1rem 0;
     padding: 1.5rem;
-    background: rgba(102, 126, 234, 0.05);
-    border-left: 4px solid #667eea;
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid #3498db;
     border-radius: 10px;
     transition: all 0.3s ease;
+    text-align: center; /* 画像を中央揃え */
 }
 
 .music-list li:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(52, 152, 219, 0.2);
     transform: translateX(10px);
     border-left-width: 6px;
 }
 
 .music-list li a {
-    color: #667eea;
+    color: #3498db;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 600;
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    border: 2px solid #667eea;
+    border: 2px solid #3498db;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(15, 20, 25, 0.3);
 }
 
 .music-list li a:hover {
-    background: #667eea;
+    background: #3498db;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 /* 音楽ページのリンクボタンを横並びに */
@@ -1224,24 +1256,23 @@ header h1 {
 }
 
 .music-content .button-group a {
-    color: #667eea;
+    color: #3498db;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
-    border: 2px solid #667eea;
+    border: 2px solid #3498db;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(15, 20, 25, 0.3);
     text-align: center;
     min-width: 150px;
 }
 
 .music-content .button-group a:hover {
-    background: #667eea;
+    background: #3498db;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 /* 音楽画像スタイル */
@@ -1321,18 +1352,18 @@ header h1 {
 /* ========== Anime Page Styles ========== */
 
 .anime-list {
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.9), rgba(44, 62, 80, 0.9));
     backdrop-filter: blur(10px);
     padding: 3rem;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     margin: 2rem 0;
     transition: all 0.3s ease;
 }
 
 .anime-list:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #3498db;
 }
 
 .anime-list ul {
@@ -1343,14 +1374,14 @@ header h1 {
 
 .anime-list h1 {
     font-size: 2.2rem;
-    color: #2d3436;
+    color: #e8f4fd;
     margin: 2rem 0 1rem 0;
     padding: 1.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
     color: white;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    border: 2px solid rgba(52, 152, 219, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -1363,12 +1394,12 @@ header h1 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 40%, rgba(116, 185, 255, 0.2) 0%, transparent 50%);
 }
 
 .anime-list h1:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    border-color: #74b9ff;
 }
 
 .anime-list h1:first-child {
@@ -1378,15 +1409,15 @@ header h1 {
 .anime-list li {
     margin: 1rem 0;
     padding: 1.5rem;
-    background: rgba(102, 126, 234, 0.05);
-    border-left: 4px solid #667eea;
+    background: rgba(52, 152, 219, 0.1);
+    border-left: 4px solid #3498db;
     border-radius: 10px;
     transition: all 0.3s ease;
     text-align: center;
 }
 
 .anime-list li:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(52, 152, 219, 0.2);
     transform: translateX(10px);
     border-left-width: 6px;
 }
@@ -1407,24 +1438,23 @@ header h1 {
 }
 
 .anime-content .button-group a {
-    color: #667eea;
+    color: #3498db;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
-    border: 2px solid #667eea;
+    border: 2px solid #3498db;
     border-radius: 25px;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(15, 20, 25, 0.3);
     text-align: center;
     min-width: 150px;
 }
 
 .anime-content .button-group a:hover {
-    background: #667eea;
+    background: #3498db;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 /* アニメ画像スタイル */
