@@ -92,12 +92,34 @@
             </ul>
         </section>
     </main>
-</body>
-</section>
-    <!-- JavaScript -->
-    <script src="js/java.js"></script>
+
     <footer>
         <p>&copy; 2025 竹中海斗. All rights reserved.</p>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="ページ上部へ戻る" title="Top">▲</button>
+
+    <!-- JavaScript -->
+    <script src="js/java.js"></script>
+    <script>
+    // Back to Top button behavior
+    (function(){
+        const btn = document.getElementById('backToTop');
+        if (!btn) return;
+        const toggleClass = () => {
+            if (window.scrollY > 300) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        };
+        window.addEventListener('scroll', toggleClass, { passive: true });
+        window.addEventListener('load', toggleClass);
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
+    </script>
+</body>
 </html>

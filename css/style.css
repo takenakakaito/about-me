@@ -1601,3 +1601,52 @@ header h1 {
         aspect-ratio: 1;
     }
 }
+
+/* ========== Back to Top Button ========== */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #fff;
+    border: 2px solid #3498db;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease, background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: linear-gradient(135deg, #2980b9, #1f4e79);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.35);
+}
+
+/* 小さな画面での位置調整 */
+@media (max-width: 480px) {
+    .back-to-top {
+        right: 12px;
+        bottom: 12px;
+        width: 44px;
+        height: 44px;
+    }
+}
